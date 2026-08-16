@@ -1,0 +1,23 @@
+{
+  "schema": "../schema/vepp.schema.json",
+  "vectors": [
+    {
+      "path": "../examples/ai-affected-product.json",
+      "expected": "valid"
+    },
+    {
+      "path": "../examples/human-verified-remediation.json",
+      "expected": "valid"
+    },
+    {
+      "path": "invalid-ai-without-calibration.json",
+      "expected": "invalid",
+      "expectedCodes": ["SCHEMA", "DYNAMIC_CLAIM_WITHOUT_TIME"]
+    },
+    {
+      "path": "invalid-supersession-cycle.json",
+      "expected": "invalid",
+      "expectedCodes": ["SUPERSESSION_CYCLE"]
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "profileVersion": "0.1",
+  "documentId": "urn:uuid:804d00b0-a2db-4ff9-b3c0-d42812baa140",
+  "target": {
+    "vulnerabilityId": "CVE-2099-0003",
+    "sourceRecord": {
+      "uri": "https://example.org/cve/CVE-2099-0003",
+      "digest": {
+        "algorithm": "sha256",
+        "value": "3333333333333333333333333333333333333333333333333333333333333333"
+      },
+      "retrievedAt": "2026-08-16T20:00:00Z",
+      "mediaType": "application/json"
+    }
+  },
+  "generatedAt": "2026-08-16T20:01:00Z",
+  "assertions": [
+    {
+      "id": "assertion:priority:1",
+      "claimType": "priority",
+      "value": "critical",
+      "producer": {
+        "id": "https://example.org/ai",
+        "name": "Uncalibrated AI",
+        "type": "software_agent"
+      },
+      "method": {
+        "kind": "ai",
+        "system": {
+          "name": "priority-model",
+          "version": "1"
+        }
+      },
+      "evidence": [
+        {
+          "uri": "https://example.org/advisory",
+          "digest": {
+            "algorithm": "sha256",
+            "value": "4444444444444444444444444444444444444444444444444444444444444444"
+          },
+          "retrievedAt": "2026-08-16T20:00:00Z",
+          "evidenceType": "security_advisory"
+        }
+      ],
+      "confidence": {
+        "kind": "calibrated_probability",
+        "score": 0.99,
+        "rationale": "The system reported high confidence."
+      },
+      "review": { "status": "unreviewed" },
+      "lifecycle": { "state": "active" },
+      "createdAt": "2026-08-16T20:01:00Z"
+    }
+  ]
+}

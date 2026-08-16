@@ -1,0 +1,85 @@
+{
+  "profileVersion": "0.1",
+  "documentId": "urn:uuid:a753928c-7c92-4fa7-a9d5-e4dcb2b5f7e4",
+  "target": {
+    "vulnerabilityId": "CVE-2099-0004",
+    "sourceRecord": {
+      "uri": "https://example.org/cve/CVE-2099-0004",
+      "digest": {
+        "algorithm": "sha256",
+        "value": "5555555555555555555555555555555555555555555555555555555555555555"
+      },
+      "retrievedAt": "2026-08-16T21:00:00Z",
+      "mediaType": "application/json"
+    }
+  },
+  "generatedAt": "2026-08-16T21:01:00Z",
+  "assertions": [
+    {
+      "id": "assertion:a",
+      "claimType": "description",
+      "value": "First description",
+      "producer": {
+        "id": "https://example.org/analyst",
+        "name": "Example Analyst",
+        "type": "person"
+      },
+      "method": { "kind": "manual" },
+      "evidence": [
+        {
+          "uri": "https://example.org/evidence/a",
+          "digest": {
+            "algorithm": "sha256",
+            "value": "6666666666666666666666666666666666666666666666666666666666666666"
+          },
+          "retrievedAt": "2026-08-16T21:00:00Z",
+          "evidenceType": "other"
+        }
+      ],
+      "confidence": {
+        "kind": "not_applicable",
+        "rationale": "Manual transcription."
+      },
+      "review": { "status": "unreviewed" },
+      "lifecycle": {
+        "state": "superseded",
+        "replacedBy": "assertion:b",
+        "reason": "Updated wording"
+      },
+      "createdAt": "2026-08-16T21:01:00Z"
+    },
+    {
+      "id": "assertion:b",
+      "claimType": "description",
+      "value": "Second description",
+      "producer": {
+        "id": "https://example.org/analyst",
+        "name": "Example Analyst",
+        "type": "person"
+      },
+      "method": { "kind": "manual" },
+      "evidence": [
+        {
+          "uri": "https://example.org/evidence/b",
+          "digest": {
+            "algorithm": "sha256",
+            "value": "7777777777777777777777777777777777777777777777777777777777777777"
+          },
+          "retrievedAt": "2026-08-16T21:00:00Z",
+          "evidenceType": "other"
+        }
+      ],
+      "confidence": {
+        "kind": "not_applicable",
+        "rationale": "Manual transcription."
+      },
+      "review": { "status": "unreviewed" },
+      "lifecycle": {
+        "state": "superseded",
+        "replacedBy": "assertion:a",
+        "reason": "Restored wording"
+      },
+      "createdAt": "2026-08-16T21:01:00Z"
+    }
+  ]
+}

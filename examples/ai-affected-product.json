@@ -1,0 +1,106 @@
+{
+  "$schema": "urn:standards-radar:vepp:schema:0.1",
+  "profileVersion": "0.1",
+  "documentId": "urn:uuid:6f4689be-e574-4fd8-964f-f92b44e4b2c4",
+  "target": {
+    "vulnerabilityId": "CVE-2099-0001",
+    "sourceRecord": {
+      "uri": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2099-0001",
+      "digest": {
+        "algorithm": "sha256",
+        "value": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      },
+      "retrievedAt": "2026-08-16T18:00:00Z",
+      "mediaType": "application/json",
+      "schemaVersion": "NVD_CVE/2.0"
+    }
+  },
+  "generatedAt": "2026-08-16T18:05:00Z",
+  "assertions": [
+    {
+      "id": "assertion:affected-product:1",
+      "claimType": "affected_product",
+      "value": {
+        "identifiers": [
+          "pkg:pypi/example-package@4.2.0",
+          "cpe:2.3:a:example:example_package:4.2.0:*:*:*:*:*:*:*"
+        ],
+        "versionStatus": "affected"
+      },
+      "targetPaths": ["/vulnerabilities/0/cve/configurations"],
+      "standardRefs": [
+        {
+          "specification": "https://www.packageurl.org/docs/purl/specification/",
+          "element": "Package-URL"
+        },
+        {
+          "specification": "https://doi.org/10.6028/NIST.IR.7695",
+          "element": "CPE 2.3 formatted-string binding"
+        }
+      ],
+      "producer": {
+        "id": "https://example.org/systems/enrichment-pipeline",
+        "name": "Example Enrichment Pipeline",
+        "type": "software_agent",
+        "role": "candidate generator"
+      },
+      "method": {
+        "kind": "hybrid",
+        "description": "Model-generated product candidate constrained by deterministic identifier parsing.",
+        "system": {
+          "name": "example-product-matcher",
+          "version": "1.4.2",
+          "modelId": "example-product-linker-2026-07",
+          "modelDigest": {
+            "algorithm": "sha256",
+            "value": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+          },
+          "parametersDigest": {
+            "algorithm": "sha256",
+            "value": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+          }
+        }
+      },
+      "evidence": [
+        {
+          "uri": "https://vendor.example/security/advisories/EXAMPLE-2099-01",
+          "digest": {
+            "algorithm": "sha256",
+            "value": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+          },
+          "retrievedAt": "2026-08-16T17:58:00Z",
+          "evidenceType": "vendor_advisory",
+          "mediaType": "text/html"
+        }
+      ],
+      "confidence": {
+        "kind": "calibrated_probability",
+        "score": 0.87,
+        "rationale": "Probability that the normalized package and affected range match the advisory.",
+        "calibration": {
+          "method": "isotonic regression on held-out product-matching labels",
+          "dataset": {
+            "uri": "https://example.org/datasets/product-matching-eval-2026-07.jsonl",
+            "digest": {
+              "algorithm": "sha256",
+              "value": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
+            }
+          },
+          "evaluatedAt": "2026-08-01T00:00:00Z",
+          "metrics": {
+            "brierScore": 0.08,
+            "expectedCalibrationError": 0.03
+          }
+        }
+      },
+      "review": {
+        "status": "machine_checked",
+        "notes": "Identifier syntax and version-range consistency checks passed; human review remains pending."
+      },
+      "lifecycle": {
+        "state": "active"
+      },
+      "createdAt": "2026-08-16T18:05:00Z"
+    }
+  ]
+}

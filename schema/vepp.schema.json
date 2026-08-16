@@ -1,0 +1,344 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:standards-radar:vepp:schema:0.1",
+  "title": "Vulnerability Enrichment Provenance Profile",
+  "description": "A proposed additive sidecar for assertion-level provenance, confidence, review, and lifecycle metadata attached to vulnerability enrichment records.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "profileVersion",
+    "documentId",
+    "target",
+    "generatedAt",
+    "assertions"
+  ],
+  "properties": {
+    "$schema": { "type": "string", "format": "uri" },
+    "profileVersion": { "const": "0.1" },
+    "documentId": { "type": "string", "format": "uri" },
+    "target": { "$ref": "#/$defs/target" },
+    "generatedAt": { "type": "string", "format": "date-time" },
+    "assertions": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/assertion" }
+    },
+    "attestation": { "$ref": "#/$defs/attestation" }
+  },
+  "$defs": {
+    "digest": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["algorithm", "value"],
+      "properties": {
+        "algorithm": { "const": "sha256" },
+        "value": { "type": "string", "pattern": "^[A-Fa-f0-9]{64}$" }
+      }
+    },
+    "target": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["vulnerabilityId", "sourceRecord"],
+      "properties": {
+        "vulnerabilityId": {
+          "type": "string",
+          "pattern": "^CVE-[0-9]{4}-[0-9]{4,}$"
+        },
+        "sourceRecord": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["uri", "digest", "retrievedAt", "mediaType"],
+          "properties": {
+            "uri": { "type": "string", "format": "uri" },
+            "digest": { "$ref": "#/$defs/digest" },
+            "retrievedAt": { "type": "string", "format": "date-time" },
+            "mediaType": { "type": "string", "minLength": 3 },
+            "schemaVersion": { "type": "string", "minLength": 1 }
+          }
+        }
+      }
+    },
+    "producer": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "name", "type"],
+      "properties": {
+        "id": { "type": "string", "format": "uri" },
+        "name": { "type": "string", "minLength": 1 },
+        "type": {
+          "enum": ["person", "organization", "software_agent"]
+        },
+        "role": { "type": "string", "minLength": 1 }
+      }
+    },
+    "method": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind"],
+      "properties": {
+        "kind": {
+          "enum": ["manual", "rules", "ai", "hybrid", "imported"]
+        },
+        "description": { "type": "string", "minLength": 1 },
+        "system": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["name", "version"],
+          "properties": {
+            "name": { "type": "string", "minLength": 1 },
+            "version": { "type": "string", "minLength": 1 },
+            "modelId": { "type": "string", "minLength": 1 },
+            "modelDigest": { "$ref": "#/$defs/digest" },
+            "parametersDigest": { "$ref": "#/$defs/digest" }
+          }
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": { "kind": { "enum": ["ai", "hybrid"] } },
+            "required": ["kind"]
+          },
+          "then": { "required": ["system"] }
+        }
+      ]
+    },
+    "evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["uri", "digest", "retrievedAt", "evidenceType"],
+      "properties": {
+        "uri": { "type": "string", "format": "uri" },
+        "digest": { "$ref": "#/$defs/digest" },
+        "retrievedAt": { "type": "string", "format": "date-time" },
+        "evidenceType": {
+          "enum": [
+            "cve_record",
+            "vendor_advisory",
+            "security_advisory",
+            "exploit_observation",
+            "public_repository",
+            "research_publication",
+            "sbom",
+            "vex",
+            "other"
+          ]
+        },
+        "mediaType": { "type": "string", "minLength": 3 },
+        "license": { "type": "string", "minLength": 1 }
+      }
+    },
+    "calibration": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["method", "dataset", "evaluatedAt", "metrics"],
+      "properties": {
+        "method": { "type": "string", "minLength": 1 },
+        "dataset": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["uri", "digest"],
+          "properties": {
+            "uri": { "type": "string", "format": "uri" },
+            "digest": { "$ref": "#/$defs/digest" }
+          }
+        },
+        "evaluatedAt": { "type": "string", "format": "date-time" },
+        "metrics": {
+          "type": "object",
+          "minProperties": 1,
+          "additionalProperties": {
+            "type": "number",
+            "minimum": 0
+          }
+        }
+      }
+    },
+    "confidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "rationale"],
+      "properties": {
+        "kind": {
+          "enum": [
+            "calibrated_probability",
+            "assessed_confidence",
+            "not_applicable"
+          ]
+        },
+        "score": { "type": "number", "minimum": 0, "maximum": 1 },
+        "rationale": { "type": "string", "minLength": 1 },
+        "rubric": { "type": "string", "minLength": 1 },
+        "calibration": { "$ref": "#/$defs/calibration" }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": { "kind": { "const": "calibrated_probability" } },
+            "required": ["kind"]
+          },
+          "then": { "required": ["score", "calibration"] }
+        },
+        {
+          "if": {
+            "properties": { "kind": { "const": "assessed_confidence" } },
+            "required": ["kind"]
+          },
+          "then": { "required": ["score", "rubric"] }
+        },
+        {
+          "if": {
+            "properties": { "kind": { "const": "not_applicable" } },
+            "required": ["kind"]
+          },
+          "then": {
+            "not": {
+              "anyOf": [
+                { "required": ["score"] },
+                { "required": ["rubric"] },
+                { "required": ["calibration"] }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "review": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status"],
+      "properties": {
+        "status": {
+          "enum": [
+            "unreviewed",
+            "machine_checked",
+            "human_verified",
+            "disputed",
+            "rejected"
+          ]
+        },
+        "reviewer": { "$ref": "#/$defs/producer" },
+        "reviewedAt": { "type": "string", "format": "date-time" },
+        "notes": { "type": "string" }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": { "status": { "const": "human_verified" } },
+            "required": ["status"]
+          },
+          "then": { "required": ["reviewer", "reviewedAt"] }
+        }
+      ]
+    },
+    "validTime": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["observedAt"],
+      "properties": {
+        "observedAt": { "type": "string", "format": "date-time" },
+        "expiresAt": { "type": "string", "format": "date-time" }
+      }
+    },
+    "lifecycle": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["state"],
+      "properties": {
+        "state": { "enum": ["active", "superseded", "retracted"] },
+        "replacedBy": { "type": "string", "pattern": "^[A-Za-z0-9._:-]+$" },
+        "reason": { "type": "string", "minLength": 1 }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": { "state": { "const": "superseded" } },
+            "required": ["state"]
+          },
+          "then": { "required": ["replacedBy", "reason"] }
+        },
+        {
+          "if": {
+            "properties": { "state": { "const": "retracted" } },
+            "required": ["state"]
+          },
+          "then": { "required": ["reason"] }
+        }
+      ]
+    },
+    "standardRef": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["specification", "element"],
+      "properties": {
+        "specification": { "type": "string", "format": "uri" },
+        "element": { "type": "string", "minLength": 1 }
+      }
+    },
+    "assertion": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "claimType",
+        "value",
+        "producer",
+        "method",
+        "evidence",
+        "confidence",
+        "review",
+        "lifecycle",
+        "createdAt"
+      ],
+      "properties": {
+        "id": { "type": "string", "pattern": "^[A-Za-z0-9._:-]+$" },
+        "claimType": {
+          "enum": [
+            "affected_product",
+            "description",
+            "exploit_activity",
+            "exploit_probability",
+            "priority",
+            "reference",
+            "remediation",
+            "severity",
+            "weakness"
+          ]
+        },
+        "value": {},
+        "targetPaths": {
+          "type": "array",
+          "items": { "type": "string", "pattern": "^/" },
+          "uniqueItems": true
+        },
+        "standardRefs": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/standardRef" },
+          "uniqueItems": true
+        },
+        "producer": { "$ref": "#/$defs/producer" },
+        "method": { "$ref": "#/$defs/method" },
+        "evidence": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/$defs/evidence" }
+        },
+        "confidence": { "$ref": "#/$defs/confidence" },
+        "review": { "$ref": "#/$defs/review" },
+        "validTime": { "$ref": "#/$defs/validTime" },
+        "lifecycle": { "$ref": "#/$defs/lifecycle" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      }
+    },
+    "attestation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["format", "uri", "digest"],
+      "properties": {
+        "format": { "enum": ["in_toto_dsse", "scitt_receipt", "other"] },
+        "uri": { "type": "string", "format": "uri" },
+        "digest": { "$ref": "#/$defs/digest" }
+      }
+    }
+  }
+}

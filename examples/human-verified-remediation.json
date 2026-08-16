@@ -1,0 +1,77 @@
+{
+  "$schema": "urn:standards-radar:vepp:schema:0.1",
+  "profileVersion": "0.1",
+  "documentId": "urn:uuid:7f5a9a37-dd37-4a41-8c0a-7790bcc2e374",
+  "target": {
+    "vulnerabilityId": "CVE-2099-0002",
+    "sourceRecord": {
+      "uri": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2099-0002",
+      "digest": {
+        "algorithm": "sha256",
+        "value": "1111111111111111111111111111111111111111111111111111111111111111"
+      },
+      "retrievedAt": "2026-08-16T19:00:00Z",
+      "mediaType": "application/json",
+      "schemaVersion": "NVD_CVE/2.0"
+    }
+  },
+  "generatedAt": "2026-08-16T19:15:00Z",
+  "assertions": [
+    {
+      "id": "assertion:remediation:1",
+      "claimType": "remediation",
+      "value": {
+        "action": "upgrade",
+        "target": "pkg:npm/example-library@8.1.1",
+        "verification": "Run the vendor regression suite and confirm the vulnerable path is unreachable."
+      },
+      "standardRefs": [
+        {
+          "specification": "https://docs.oasis-open.org/csaf/csaf/v2.0/cs03/csaf-v2.0-cs03.html",
+          "element": "vulnerabilities.remediations"
+        }
+      ],
+      "producer": {
+        "id": "https://vendor.example/security-team",
+        "name": "Example Vendor Security Team",
+        "type": "organization",
+        "role": "software producer"
+      },
+      "method": {
+        "kind": "manual",
+        "description": "Remediation copied from the signed vendor advisory and verified by a product security analyst."
+      },
+      "evidence": [
+        {
+          "uri": "https://vendor.example/security/advisories/EXAMPLE-2099-02.json",
+          "digest": {
+            "algorithm": "sha256",
+            "value": "2222222222222222222222222222222222222222222222222222222222222222"
+          },
+          "retrievedAt": "2026-08-16T18:58:00Z",
+          "evidenceType": "security_advisory",
+          "mediaType": "application/json"
+        }
+      ],
+      "confidence": {
+        "kind": "not_applicable",
+        "rationale": "The profile does not convert an authoritative vendor statement into an artificial numeric confidence score."
+      },
+      "review": {
+        "status": "human_verified",
+        "reviewer": {
+          "id": "https://example.org/reviewers/analyst-17",
+          "name": "Example Product Security Analyst",
+          "type": "person",
+          "role": "remediation reviewer"
+        },
+        "reviewedAt": "2026-08-16T19:12:00Z",
+        "notes": "Verified against the vendor advisory and release metadata."
+      },
+      "lifecycle": {
+        "state": "active"
+      },
+      "createdAt": "2026-08-16T19:15:00Z"
+    }
+  ]
+}

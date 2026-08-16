@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use or discuss VEPP, please cite this repository."
+title: "Vulnerability Enrichment Provenance Profile (VEPP)"
+type: software
+version: 0.1.0-draft
+date-released: 2026-08-16
+authors:
+  - family-names: Adwant
+    given-names: Goutam
+url: "https://github.com/goutamadwant/nvd-ai-provenance"
+repository-code: "https://github.com/goutamadwant/nvd-ai-provenance"
+license: MIT
+keywords:
+  - vulnerability enrichment
+  - provenance
+  - NVD
+  - artificial intelligence
+  - cybersecurity
