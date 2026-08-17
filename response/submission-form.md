@@ -20,16 +20,17 @@ I am submitting the attached technical response to Federal Register document
 assertion-level provenance profile for AI-assisted vulnerability enrichment and
 includes a machine-readable schema, validator, test vectors, standards
 crosswalk, and threat model. The materials are submitted in my individual
-capacity and contain no confidential business information.
+capacity and contain no confidential business information. The public companion
+repository is https://github.com/goutamadwant/nvd-ai-provenance.
 
 ## Uploads
 
 1. `Goutam-Adwant-NIST-2026-0100-NVD-AI-Provenance.pdf`
 2. `Goutam-Adwant-NIST-2026-0100-VEPP-Companion.zip`
 
-If the portal permits only one attachment, upload the PDF and include a public
-repository URL for the companion package after that repository has been created
-and verified. Do not include a placeholder or private URL.
+If the portal permits only one attachment, upload the PDF. The verified public
+companion package is available at
+https://github.com/goutamadwant/nvd-ai-provenance.
 
 ## Submission Steps
 

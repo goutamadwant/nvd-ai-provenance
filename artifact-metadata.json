@@ -7,9 +7,10 @@
     "github": "https://github.com/goutamadwant"
   },
   "purpose": "Technical companion artifact for NIST RFI 2026-16371",
-  "status": "draft-for-public-review",
+  "status": "public-draft-not-submitted",
   "license": "MIT",
   "created": "2026-08-16",
+  "repository": "https://github.com/goutamadwant/nvd-ai-provenance",
   "submissionDocket": "NIST-2026-0100",
   "federalRegisterDocument": "2026-16371"
 }

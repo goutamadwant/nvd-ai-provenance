@@ -7,7 +7,9 @@
 - Regulations.gov docket: `NIST-2026-0100`
 - Deadline: October 13, 2026 at 11:59 p.m. ET
 - Package status: **prepared and verified; not submitted**
-- External publication status: **not published**
+- External publication status: **published as a public draft**
+- Public repository: https://github.com/goutamadwant/nvd-ai-provenance
+- Author review decision: **approved for publication on August 16, 2026**
 
 ## Verified Locally
 
@@ -20,15 +22,12 @@
 - Companion ZIP excludes caches, tokens, databases, and machine-local paths.
 - SHA-256 checksums verify for the PDF and ZIP.
 
-## Remaining Human Decisions
+## Remaining Submission Actions
 
-1. Review the public identity and technical positions in the PDF.
-2. Decide whether to publish the companion package in a new public GitHub
-   repository before submission. If published, add the verified repository URL
-   to the comment and regenerate the PDF.
-3. Complete the privacy checklist.
-4. Submit manually through Regulations.gov.
-5. Save the receipt and record the outcome as `submitted` only.
+1. Review the final regenerated PDF after the repository URL is embedded.
+2. Complete the privacy checklist.
+3. Submit manually through Regulations.gov.
+4. Save the receipt and record the outcome as `submitted` only.
 
 Preparation is not submission, acknowledgement, adoption, citation, or evidence
 of field-wide impact. Those states require separate public proof.

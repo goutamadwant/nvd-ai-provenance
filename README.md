@@ -3,8 +3,11 @@
 [![CI](https://github.com/goutamadwant/nvd-ai-provenance/actions/workflows/ci.yml/badge.svg)](https://github.com/goutamadwant/nvd-ai-provenance/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-This folder is a review-ready response package for Federal Register document
-`2026-16371`, submitted through Regulations.gov docket `NIST-2026-0100`.
+This repository is a review-ready response package for Federal Register
+document `2026-16371`, prepared for submission through Regulations.gov docket
+`NIST-2026-0100`.
+
+**Public repository:** https://github.com/goutamadwant/nvd-ai-provenance
 
 The package proposes the Vulnerability Enrichment Provenance Profile (VEPP), an
 additive, machine-readable sidecar for recording how individual vulnerability
@@ -48,7 +51,7 @@ test fixtures, not vulnerability intelligence.
 
 ## Submission Boundary
 
-Nothing in this folder has been submitted. The final action remains manual
+Nothing in this repository has been submitted to NIST. The final action remains manual
 because Regulations.gov publishes comments without change or redaction. The
 review checklist must be completed before upload.
 

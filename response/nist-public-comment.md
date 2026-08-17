@@ -349,6 +349,9 @@ inputs, not sufficient measures of cybersecurity impact.
 
 ## Companion Prototype
 
+The companion prototype is publicly available at:
+https://github.com/goutamadwant/nvd-ai-provenance
+
 The attached companion package contains:
 
 - VEPP JSON Schema Draft 2020-12;

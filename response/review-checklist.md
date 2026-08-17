@@ -26,7 +26,7 @@ Status: **NOT SUBMITTED**
 - [ ] Full project tests, Ruff, and mypy pass.
 - [ ] Synthetic examples are clearly labeled and contain no real vulnerability intelligence.
 - [ ] ZIP contents include the license, schema, validator, examples, tests, design, crosswalk, threat model, and source register.
-- [ ] Public repository URL, if included, resolves without authentication.
+- [x] Public repository URL resolves without authentication.
 
 ## Privacy and Disclosure
 
