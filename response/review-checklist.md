@@ -27,6 +27,7 @@ Status: **NOT SUBMITTED**
 - [ ] Synthetic examples are clearly labeled and contain no real vulnerability intelligence.
 - [ ] ZIP contents include the license, schema, validator, examples, tests, design, crosswalk, threat model, and source register.
 - [x] Public repository URL resolves without authentication.
+- [ ] Exact docket `NIST-2026-0100` and document `2026-16371` resolve on Regulations.gov.
 
 ## Privacy and Disclosure
 

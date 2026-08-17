@@ -10,6 +10,13 @@
 - External publication status: **published as a public draft**
 - Public repository: https://github.com/goutamadwant/nvd-ai-provenance
 - Author review decision: **approved for publication on August 16, 2026**
+- Submission portal status: **not yet available**
+
+On August 16, 2026, exact Regulations.gov searches and API queries returned no
+docket or document for `NIST-2026-0100`, Federal Register document `2026-16371`,
+or agency docket `260805-0401`. The Federal Register notice is authoritative and
+still directs commenters to `NIST-2026-0100`, but its structured metadata has no
+Regulations.gov URL. Do not use a different docket.
 
 ## Verified Locally
 
@@ -24,10 +31,11 @@
 
 ## Remaining Submission Actions
 
-1. Review the final regenerated PDF after the repository URL is embedded.
-2. Complete the privacy checklist.
-3. Submit manually through Regulations.gov.
-4. Save the receipt and record the outcome as `submitted` only.
+1. Wait for the exact docket or document to appear on Regulations.gov.
+2. Verify that its title and Federal Register document number match this RFI.
+3. Review the final PDF and complete the privacy checklist.
+4. Submit manually through Regulations.gov.
+5. Save the receipt and record the outcome as `submitted` only.
 
 Preparation is not submission, acknowledgement, adoption, citation, or evidence
 of field-wide impact. Those states require separate public proof.

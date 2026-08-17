@@ -36,3 +36,12 @@ claims in the response.
 - Synthetic examples do not reproduce real NVD, vendor, or exploit data.
 - If a linked standard changes before submission, the response and crosswalk
   must be reviewed against the new version.
+
+## Submission Portal Verification
+
+On August 16, 2026, Regulations.gov UI and API searches returned zero exact
+matches for docket `NIST-2026-0100`, Federal Register document `2026-16371`, and
+agency docket `260805-0401`. The Federal Register API reported
+`regulations_dot_gov_url: null` and that Regulations.gov had last been checked
+on August 12, 2026. This is recorded as a temporary submission blocker, not as
+evidence that the RFI is withdrawn or invalid.

@@ -12,6 +12,17 @@
 - **Capacity/category:** Individual
 - **Deadline:** October 13, 2026, 11:59 p.m. Eastern Time
 
+## Portal Readiness Gate
+
+**Current status as of August 16, 2026: STOP - the submission record is not yet
+available on Regulations.gov.**
+
+The official Federal Register notice directs commenters to `NIST-2026-0100`.
+However, exact Regulations.gov UI and API searches currently return no docket
+or document for `NIST-2026-0100`, `2026-16371`, or `260805-0401`. Do not submit
+this response to another NIST docket. Continue only after the exact RFI title
+and Federal Register document number appear together on Regulations.gov.
+
 ## Text to Paste in the Comment Field
 
 I am submitting the attached technical response to Federal Register document
@@ -35,15 +46,16 @@ https://github.com/goutamadwant/nvd-ai-provenance.
 ## Submission Steps
 
 1. Open https://www.regulations.gov and search for `NIST-2026-0100`.
-2. Confirm the result is Federal Register document `2026-16371` with the exact
+2. If no result appears, stop and retry later. Do not choose a similar docket.
+3. Confirm the result is Federal Register document `2026-16371` with the exact
    title above.
-3. Select **Comment Now**.
-4. Enter the title, individual capacity, and contact fields you are comfortable
+4. Select **Comment Now**.
+5. Enter the title, individual capacity, and contact fields you are comfortable
    publishing or providing to the agency.
-5. Paste the short cover text above.
-6. Attach the final PDF and companion ZIP.
-7. Complete the review checklist before selecting submit.
-8. Save the confirmation/receipt and public comment URL.
+6. Paste the short cover text above.
+7. Attach the final PDF and companion ZIP.
+8. Complete the review checklist before selecting submit.
+9. Save the confirmation/receipt and public comment URL.
 
 The Federal Register notice states that relevant comments will be posted without
 change or redaction. Do not submit secrets, private addresses, confidential

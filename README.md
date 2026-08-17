@@ -55,6 +55,12 @@ Nothing in this repository has been submitted to NIST. The final action remains 
 because Regulations.gov publishes comments without change or redaction. The
 review checklist must be completed before upload.
 
+As of August 16, 2026, the Federal Register notice directs commenters to docket
+`NIST-2026-0100`, but that docket and document are not yet present in the
+Regulations.gov search interface or API. Do not submit through a different
+docket. See `STATUS.md` and `response/submission-form.md` for the verification
+gate.
+
 ## License
 
 MIT. See `LICENSE`.
