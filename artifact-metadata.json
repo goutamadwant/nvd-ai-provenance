@@ -12,7 +12,10 @@
   "created": "2026-08-16",
   "repository": "https://github.com/goutamadwant/nvd-ai-provenance",
   "submissionDocket": "NIST-2026-0100",
-  "submissionPortalStatus": "not-yet-available",
-  "submissionPortalChecked": "2026-08-16",
+  "submissionPortalStatus": "available-open-for-comment",
+  "submissionPortalChecked": "2026-08-17",
+  "submissionDocument": "NIST-2026-0100-0001",
+  "submissionUrl": "https://www.regulations.gov/commenton/NIST-2026-0100-0001",
+  "submissionCloses": "2026-10-14T03:59:59Z",
   "federalRegisterDocument": "2026-16371"
 }

@@ -3,25 +3,26 @@
 ## Exact Metadata
 
 - **Docket search:** `NIST-2026-0100`
+- **Regulations.gov document:** `NIST-2026-0100-0001`
+- **Direct comment form:** https://www.regulations.gov/commenton/NIST-2026-0100-0001
 - **Federal Register document:** `2026-16371`
 - **Agency docket number:** `260805-0401`
 - **Document title:** Request for Information (RFI) on Modernizing the National Vulnerability Database in the Age of Artificial Intelligence
-- **Comment title/subject:** Assertion-Level Provenance and Verifiable AI Enrichment for a Modernized NVD
+- **Response title in the attached PDF:** Assertion-Level Provenance and Verifiable AI Enrichment for a Modernized NVD
 - **Commenter:** Goutam Adwant
 - **Organization:** Leave blank unless you are authorized to represent one
 - **Capacity/category:** Individual
-- **Deadline:** October 13, 2026, 11:59 p.m. Eastern Time
+- **Deadline:** October 13, 2026, 11:59 p.m. EDT (8:59 p.m. PDT; `2026-10-14T03:59:59Z`)
 
 ## Portal Readiness Gate
 
-**Current status as of August 16, 2026: STOP - the submission record is not yet
-available on Regulations.gov.**
+**Current status as of August 17, 2026: READY FOR FINAL HUMAN REVIEW.**
 
-The official Federal Register notice directs commenters to `NIST-2026-0100`.
-However, exact Regulations.gov UI and API searches currently return no docket
-or document for `NIST-2026-0100`, `2026-16371`, or `260805-0401`. Do not submit
-this response to another NIST docket. Continue only after the exact RFI title
-and Federal Register document number appear together on Regulations.gov.
+The official Regulations.gov API confirms that document
+`NIST-2026-0100-0001` belongs to docket `NIST-2026-0100`, has the exact RFI
+title, is within its comment period, and is open for comments. The live form
+provides a 5,000-character comment field and permits up to 20 attachments, each
+no larger than 10 MB. ZIP is not an accepted file type.
 
 ## Text to Paste in the Comment Field
 
@@ -36,26 +37,31 @@ repository is https://github.com/goutamadwant/nvd-ai-provenance.
 
 ## Uploads
 
-1. `Goutam-Adwant-NIST-2026-0100-NVD-AI-Provenance.pdf`
-2. `Goutam-Adwant-NIST-2026-0100-VEPP-Companion.zip`
+Upload:
 
-If the portal permits only one attachment, upload the PDF. The verified public
-companion package is available at
+1. `Goutam-Adwant-NIST-2026-0100-NVD-AI-Provenance.pdf`
+
+Do not upload `Goutam-Adwant-NIST-2026-0100-VEPP-Companion.zip`; ZIP is not in
+the form's accepted file-type list. The verified public companion package is
+available at
 https://github.com/goutamadwant/nvd-ai-provenance.
 
 ## Submission Steps
 
-1. Open https://www.regulations.gov and search for `NIST-2026-0100`.
-2. If no result appears, stop and retry later. Do not choose a similar docket.
-3. Confirm the result is Federal Register document `2026-16371` with the exact
-   title above.
-4. Select **Comment Now**.
-5. Enter the title, individual capacity, and contact fields you are comfortable
-   publishing or providing to the agency.
-6. Paste the short cover text above.
-7. Attach the final PDF and companion ZIP.
-8. Complete the review checklist before selecting submit.
-9. Save the confirmation/receipt and public comment URL.
+1. Open the direct comment form listed above.
+2. Confirm the page identifies NIST and shows the exact RFI title.
+3. Paste the short cover text above into the 5,000-character comment field.
+4. Upload the final PDF only and confirm it is below the 10 MB limit.
+5. Select **An Individual**. Enter `Goutam` as the required first name and
+   `Adwant` as the required last name. Do not select an organization unless you
+   are authorized to represent it.
+6. Leave city, state, ZIP, country, and phone at their defaults or blank unless
+   you deliberately want to provide them. They are not marked required.
+7. Enter an email address only if you want a private confirmation and tracking
+   number by email; do not place the email address in the public comment or PDF.
+8. Complete the review checklist and reCAPTCHA.
+9. Review the form and attachment, then select **Submit Comment** manually.
+10. Save the confirmation, tracking number, and eventual public comment URL.
 
 The Federal Register notice states that relevant comments will be posted without
 change or redaction. Do not submit secrets, private addresses, confidential

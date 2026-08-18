@@ -55,11 +55,13 @@ Nothing in this repository has been submitted to NIST. The final action remains 
 because Regulations.gov publishes comments without change or redaction. The
 review checklist must be completed before upload.
 
-As of August 16, 2026, the Federal Register notice directs commenters to docket
-`NIST-2026-0100`, but that docket and document are not yet present in the
-Regulations.gov search interface or API. Do not submit through a different
-docket. See `STATUS.md` and `response/submission-form.md` for the verification
-gate.
+As of August 17, 2026, Regulations.gov document `NIST-2026-0100-0001` is open
+for comments at
+https://www.regulations.gov/commenton/NIST-2026-0100-0001. The form accepts the
+PDF attachment but does not list ZIP as an allowed file type, so the public
+repository is the distribution point for the machine-readable companion files.
+See `STATUS.md` and `response/submission-form.md` for the verified submission
+details.
 
 ## License
 

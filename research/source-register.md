@@ -1,6 +1,6 @@
 # Authoritative Source Register
 
-Retrieved: August 16, 2026
+Retrieved: August 17, 2026
 
 Only public primary or standards-maintainer sources are used for the technical
 claims in the response.
@@ -8,6 +8,8 @@ claims in the response.
 | Source | Relevance |
 | --- | --- |
 | [Federal Register RFI 2026-16371](https://www.federalregister.gov/documents/2026/08/12/2026-16371/request-for-information-rfi-on-modernizing-the-national-vulnerability-database-in-the-age-of) | Official questions, submission method, docket, public-disclosure warning, and October 13, 2026 deadline. |
+| [Regulations.gov document NIST-2026-0100-0001](https://www.regulations.gov/document/NIST-2026-0100-0001) | Official docket record, comment period, and document identity. |
+| [Regulations.gov comment form](https://www.regulations.gov/commenton/NIST-2026-0100-0001) | Live submission fields, 5,000-character limit, attachment limits and formats, identity choices, and public-disclosure notice. |
 | [NVD general information](https://nvd.nist.gov/General) | Current NVD role and enrichment of CVE data with CVSS, CWE, CPE, and references. |
 | [NVD CVE API 2.0](https://nvd.nist.gov/developers/vulnerabilities) | Current transport, source/type fields, status values, pagination, and API behavior. |
 | [NVD Source API](https://nvd.nist.gov/developers/data-sources) | Current source registry and CVMAP acceptance metadata. |
@@ -39,9 +41,9 @@ claims in the response.
 
 ## Submission Portal Verification
 
-On August 16, 2026, Regulations.gov UI and API searches returned zero exact
-matches for docket `NIST-2026-0100`, Federal Register document `2026-16371`, and
-agency docket `260805-0401`. The Federal Register API reported
-`regulations_dot_gov_url: null` and that Regulations.gov had last been checked
-on August 12, 2026. This is recorded as a temporary submission blocker, not as
-evidence that the RFI is withdrawn or invalid.
+On August 17, 2026, Regulations.gov published document
+`NIST-2026-0100-0001` under docket `NIST-2026-0100`. The official API returned
+`openForComment: true`, `withinCommentPeriod: true`, a start time of
+`2026-08-17T04:00:00Z`, and an end time of `2026-10-14T03:59:59Z`. The live
+form accepts a 5,000-character comment and up to 20 attachments of 10 MB each,
+but ZIP is not an accepted format. The prior temporary blocker is resolved.
