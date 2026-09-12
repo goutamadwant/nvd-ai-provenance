@@ -4,8 +4,8 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 This repository is a review-ready response package for Federal Register
-document `2026-16371`, prepared for submission through Regulations.gov docket
-`NIST-2026-0100`.
+document `2026-16371`, submitted through Regulations.gov docket
+`NIST-2026-0100` and publicly posted on August 18, 2026.
 
 **Public repository:** https://github.com/goutamadwant/nvd-ai-provenance
 
@@ -51,9 +51,11 @@ test fixtures, not vulnerability intelligence.
 
 ## Submission Boundary
 
-Nothing in this repository has been submitted to NIST. The final action remains manual
-because Regulations.gov publishes comments without change or redaction. The
-review checklist must be completed before upload.
+The response is publicly posted as
+[NIST-2026-0100-0005](https://www.regulations.gov/comment/NIST-2026-0100-0005).
+It was received on August 17, 2026 and posted on August 18, 2026. The public
+PDF matches the final local response. Public posting does not establish NIST
+endorsement or adoption. No duplicate submission is needed.
 
 As of August 17, 2026, Regulations.gov document `NIST-2026-0100-0001` is open
 for comments at

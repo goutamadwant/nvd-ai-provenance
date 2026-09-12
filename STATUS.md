@@ -6,7 +6,7 @@
 - Federal Register document: `2026-16371`
 - Regulations.gov docket: `NIST-2026-0100`
 - Deadline: October 13, 2026 at 11:59 p.m. EDT (8:59 p.m. PDT)
-- Package status: **prepared and verified; not submitted**
+- Package status: **submitted and publicly posted**
 - External publication status: **published as a public draft**
 - Public repository: https://github.com/goutamadwant/nvd-ai-provenance
 - Author review decision: **approved for publication on August 16, 2026**
@@ -30,14 +30,21 @@ https://www.regulations.gov/commenton/NIST-2026-0100-0001
 - Companion ZIP excludes caches, tokens, databases, and machine-local paths.
 - SHA-256 checksums verify for the PDF and ZIP.
 
-## Remaining Submission Actions
+## Public Submission Record
 
-1. Review the final PDF and complete the privacy checklist.
-2. Open the verified direct comment URL above.
-3. Paste the prepared cover text and upload the PDF only. The form does not
-   accept ZIP attachments, so use the public repository for the companion files.
-4. Complete reCAPTCHA and submit manually through Regulations.gov.
-5. Save the tracking number and receipt, then record the outcome as `submitted` only.
+- Comment: https://www.regulations.gov/comment/NIST-2026-0100-0005
+- Submitter: Goutam Adwant, individual capacity.
+- Received: August 17, 2026.
+- Posted: August 18, 2026.
+- Tracking number: `msx-wlo5-xdrv`.
+- Withdrawn: false, verified September 12, 2026 through the official API.
+- Attachment: one seven-page PDF. The downloaded public attachment matches the
+  final response PDF byte for byte.
+- PDF SHA-256: `c2df1f5f545c22299a4fb7085e3a59ecffbdd633ac9fb99536be86f5e4f2ee08`.
 
-Preparation is not submission, acknowledgement, adoption, citation, or evidence
-of field-wide impact. Those states require separate public proof.
+The parent RFI remains open through October 13, 2026 at 11:59 p.m. EDT.
+No duplicate submission is needed. The submission instructions and review
+checklist remain as historical preparation records.
+
+Posting establishes public receipt and availability. No substantive agency
+response, endorsement, citation, adoption, or field-wide impact has been verified.
